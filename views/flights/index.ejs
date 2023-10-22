@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flights</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>View flights here!</h1>
+    <a href="/">Home Page</a>
+    <a href="/flights/new">Add a new flight!</a>
+    <br>
+    <h2>Flight List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Airline</th>
+                <th>Airport</th>
+                <th>Flight Number</th>
+                <th>Depart</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Write the line of EJS to iterate over movies using forEach -->
+            <% flightDocs.forEach(f=> { %>
+
+                <tr>
+                    <td>
+                        <%= f.airline %>
+                    </td>
+                    <td>
+                        <%= f.airport %>
+                    </td>
+                    <td>
+                        <%= f.flightNo %>
+                    </td>
+                    <td>
+                        <%= f.departs %>
+                    </td>
+                </tr>
+                <!-- Close the forEach using EJS here -->
+                <% }) %>
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -9,5 +9,5 @@ db.on("connected", function() {
 })
 
 db.on("error", function(err) {
-    console.log(err, "something");
+    console.log(err, "<-- error");
 })

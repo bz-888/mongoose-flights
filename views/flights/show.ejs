@@ -1,0 +1,45 @@
+<%- include('../partials/header') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Details</title>
+</head>
+<body>
+    <section>
+        <h1>View flight details here</h1>
+        <h3>Flight Number</h3>
+        <div><%= flight.flightNo %></div>
+        <h3>Airline</h3>
+        <div><%= flight.airline %></div>
+        <h3>Origin Airport</h3>
+        <div><%= flight.airport %></div>
+        <h3>Departure Time</h3>
+        <div><%= flight.departs %></div>
+    </section>
+    
+    <br>
+    <br>
+
+    <section>
+        <h1>Destination</h1>
+        <h3>Destination Airport</h3>
+        <select name="airport">
+            <option value="AUS">AUS</option>
+            <option value="IAH">IAH</option>
+            <option value="DFW">DFW</option>
+            <option value="FOC">FOC</option>
+            <option value="LAX">LAX</option>
+            <option value="LHR">LHR</option>
+        </select>
+        <h3>Arrival Date</h3>
+        <input type="date" name="arrival">
+        <br>
+        <br>
+        <input type="submit" value="Add Destination">
+    </section>
+</body>
+</html>
+<%- include('../partials/footer') %>

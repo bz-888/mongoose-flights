@@ -1,4 +1,4 @@
-const flightModel = require("../models/flight");
+const FlightModel = require("../models/flight");
 
 module.exports = {
     create
@@ -6,7 +6,7 @@ module.exports = {
 
 async function create(req, res) {
     try {
-        const flightDoc = await flightModel.findById(req.params.id);
+        const flightDoc = await FlightModel.findById(req.params.id);
         console.log(req.params.id, "<-- req.params.id");
         console.log(flightDoc, "<-- flightDoc");
         console.log(req.body, "<-- req,body");
@@ -15,7 +15,7 @@ async function create(req, res) {
         await flightDoc.save();
         res.redirect(`/flights/${req.params.id}`);
     } catch(err) {
-        console.log(err, "<-- ERROR");
+        console.log(err, "<-- DESTINATION ERROR");
         res.send(err);
     }
 }
